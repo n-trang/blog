@@ -8,6 +8,12 @@
     font-family: 'Open Sans', sans-serif;
   }
   
+  .nav-bar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
   .nav-links {
     display: flex;
     list-style: none;

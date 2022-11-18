@@ -1,13 +1,20 @@
 import * as React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 
 const BlogPost = ({ data, children }) => {
   return (
     <Layout pageTitle={data.mdx.frontmatter.title}>
-      <h1>{data.mdx.frontmatter.title}</h1>
+      <center>
+        <h1>{data.mdx.frontmatter.title}</h1>
+      </center>
       {children}
+      <hr></hr>
+      <p>
+        Go back to <Link to="/blog">all blog posts</Link>, or{" "}
+        <a href="mailto:n-trang@outlook.com">contact me.</a>
+      </p>
     </Layout>
   );
 };

@@ -6,12 +6,13 @@ import {
   navLinks,
   navLinkItem,
   navLinkText,
+  navBar,
 } from "./layout.module.css";
 
 const Layout = ({ pageTitle, children }) => {
   return (
     <div className={container}>
-      <nav>
+      <nav className={navBar}>
         <ul className={navLinks}>
           <li className={navLinkItem}>
             <Link to="/" className={navLinkText}>
