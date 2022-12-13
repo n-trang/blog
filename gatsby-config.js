@@ -42,6 +42,34 @@ module.exports = {
         path: `${__dirname}/src/pages/blog`,
       },
     },
-    "gatsby-plugin-mdx",
+    {
+      resolve: "gatsby-plugin-mdx-frontmatter",
+    },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: `gatsby-remark-images`,
+    //         options: {
+    //           maxWidth: 800,
+    //         },
+    //       },
+    //     ],
+    //   },
+    // },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1500,
+            },
+          },
+        ],
+      },
+    },
   ],
 };

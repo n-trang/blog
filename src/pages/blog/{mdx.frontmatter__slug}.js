@@ -5,11 +5,14 @@ import Seo from "../../components/seo";
 
 const BlogPost = ({ data, children }) => {
   return (
-    <Layout pageTitle={data.mdx.frontmatter.title}>
+    <Layout>
       <center>
-        <h1>{data.mdx.frontmatter.title}</h1>
+        <h1>{data.allMdx.frontmatter.title}</h1>
+        <p>TLDR: {data.allMdx.frontmatter.tldr}</p>
       </center>
+      <hr></hr>
       {children}
+      {/* <p>Posted on {data.mdx.frontmatter.date}</p> */}
       <hr></hr>
       <p>
         Go back to <Link to="/blog">all blog posts</Link>, or{" "}
@@ -20,15 +23,22 @@ const BlogPost = ({ data, children }) => {
 };
 
 export const query = graphql`
-  query ($id: String) {
-    mdx(id: { eq: $id }) {
-      frontmatter {
-        title
+  query MyQuery {
+    allMdx {
+      nodes {
+        frontmatter {
+          slug
+          title
+          tldr
+        }
+        tableOfContents
       }
     }
   }
 `;
 
-export const Head = ({ data }) => <Seo title={data.mdx.frontmatter.title} />;
+export const Head = ({ data }) => (
+  <Seo title={data.allMmdx.frontmatter.title} />
+);
 
 export default BlogPost;

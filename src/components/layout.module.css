@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@430&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 
 .container {
     margin: auto;
     max-width: 600px;
     font-family: 'Open Sans', sans-serif;
+    font-weight: 500;
   }
   
   .nav-bar {
@@ -34,10 +35,16 @@
     color: green;
     font-family: ' Inconsolata', monospace;
   }
+
 h1, h2, h3, h4, h5 {
   font-family: 'Inconsolata', monospace;
 }
+
 a {
     color: green;
     text-decoration: none;
+}
+
+code {
+  background-color: wheat;
 }

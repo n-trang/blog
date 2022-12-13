@@ -5,14 +5,16 @@ import Seo from "../../components/seo";
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="My Blog Posts">
-      <h2>Some blogging and translation</h2>
+    <Layout>
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
           <p>
-            <Link to={`${node.frontmatter.slug}`}>
+            <Link to={`/blog/${node.frontmatter.slug}`}>
               {node.frontmatter.title}
             </Link>
+          </p>
+          <p>
+            {node.frontmatter.tldr} ({node.frontmatter.date})
           </p>
         </article>
       ))}
@@ -25,9 +27,10 @@ export const query = graphql`
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
-          date(formatString: "MMMM D, YYYY")
+          date(formatString: "DD/MM/YYYY")
           title
           slug
+          tldr
         }
         id
       }
@@ -35,6 +38,6 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="blog ✍️ | nguyen trang" />;
+export const Head = () => <Seo title="blog | nguyen trang" />;
 
 export default BlogPage;
