@@ -3,18 +3,19 @@ import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 
-const BlogPage = ({ data }) => {
+const Project = ({ data }) => {
   return (
     <Layout>
       <h2>✍️ some writing and translation </h2>
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
           <h3>
-            <Link to={`/blog/${node.frontmatter.slug}`}>
+            <Link to={`/projects/${node.frontmatter.slug}`}>
               {node.frontmatter.title}
-            </Link>
+            </Link>{" "}
+            {"|"} <code>{node.frontmatter.techstack}</code>
           </h3>
-          <p>TLDR: {node.frontmatter.tldr}</p>
+          <p>{node.frontmatter.tldr}</p>
         </article>
       ))}
     </Layout>
@@ -25,16 +26,16 @@ export const query = graphql`
   query {
     allMdx(
       sort: { frontmatter: { date: DESC } }
-      filter: { frontmatter: { folder: { eq: "blog" } } }
+      filter: { frontmatter: { folder: { eq: "projects" } } }
     ) {
       nodes {
         frontmatter {
           title
           slug
+          techstack
           tldr
         }
         id
-        excerpt
       }
     }
   }
@@ -42,4 +43,4 @@ export const query = graphql`
 
 export const Head = () => <Seo title="blog ✍️ | nguyen trang" />;
 
-export default BlogPage;
+export default Project;

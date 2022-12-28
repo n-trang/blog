@@ -19,11 +19,11 @@ const Layout = ({ pageTitle, children }) => {
               ./trang
             </Link>
           </li>
-          {/* <li className={navLinkItem}>
-            <Link to="/" className={navLinkText}>
-              resume
+          <li className={navLinkItem}>
+            <Link to="/projects" className={navLinkText}>
+              projects 👷‍♀️
             </Link>
-          </li> */}
+          </li>
 
           <li className={navLinkItem}>
             <Link to="/blog" className={navLinkText}>
