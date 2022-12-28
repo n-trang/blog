@@ -22,7 +22,7 @@ const Project = ({ data, children }) => {
       <div style={Footer}>
         <hr></hr>
         <p>
-          go back <Link to="/projects">all projects</Link>, or{" "}
+          Go back to <Link to="/projects">all projects</Link>, or{" "}
           <a href="mailto:n-trang@outlook.com">contact</a> me.
         </p>
       </div>

@@ -20,7 +20,7 @@ const BlogPost = ({ data, children }) => {
       <div style={Footer}>
         <hr></hr>
         <p>
-          go back <Link to="/blog">all posts</Link>, or{" "}
+          Go back to <Link to="/blog">all posts</Link>, or{" "}
           <a href="mailto:n-trang@outlook.com">contact</a> me.
         </p>
       </div>
