@@ -6,7 +6,7 @@ import Seo from "../../components/seo";
 const BlogPage = ({ data }) => {
   return (
     <Layout>
-      <h2>✍️ some writing and translation </h2>
+      <h2>I write along as I learn. Also some translations and essays.</h2>
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>
           <h3>
@@ -14,7 +14,7 @@ const BlogPage = ({ data }) => {
               {node.frontmatter.title}
             </Link>
           </h3>
-          <p>TLDR: {node.frontmatter.tldr}</p>
+          <p>{node.frontmatter.tldr}</p>
         </article>
       ))}
     </Layout>

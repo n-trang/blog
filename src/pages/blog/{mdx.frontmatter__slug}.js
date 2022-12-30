@@ -18,11 +18,10 @@ const BlogPost = ({ data, children }) => {
       <hr></hr>
       {children}
       <div style={Footer}>
-        <hr></hr>
-        <p>
+        <code>
           Go back to <Link to="/blog">all posts</Link>, or{" "}
           <a href="mailto:n-trang@outlook.com">contact</a> me.
-        </p>
+        </code>
       </div>
     </Layout>
   );

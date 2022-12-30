@@ -12,19 +12,18 @@ const Project = ({ data, children }) => {
     <Layout>
       <center>
         <h1>{data.mdx.frontmatter.title} </h1>
-        <p>
-          <b>Tech stack</b>: {data.mdx.frontmatter.techstack}
-        </p>
-        <p>{data.mdx.frontmatter.tldr}</p>
+        <code>Tools & technologies: {data.mdx.frontmatter.techstack}</code>
       </center>
       <hr></hr>
+      <h2>What</h2>
+      <p>{data.mdx.frontmatter.tldr}</p>
       {children}
       <div style={Footer}>
-        <hr></hr>
-        <p>
-          Go back to <Link to="/projects">all projects</Link>, or{" "}
+        <br></br>
+        <code>
+          Go back to <Link to="/#projects">all projects</Link>, or{" "}
           <a href="mailto:n-trang@outlook.com">contact</a> me.
-        </p>
+        </code>
       </div>
     </Layout>
   );
