@@ -18,6 +18,20 @@ module.exports = {
 
     "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+
     "gatsby-transformer-sharp",
 
     {
@@ -39,20 +53,6 @@ module.exports = {
 
     {
       resolve: "gatsby-plugin-mdx-frontmatter",
-    },
-
-    {
-      resolve: `gatsby-transformer-remark`,
-      options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 800,
-            },
-          },
-        ],
-      },
     },
   ],
 };
