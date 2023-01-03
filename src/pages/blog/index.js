@@ -2,10 +2,15 @@ import * as React from "react";
 import { Link, graphql } from "gatsby";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
+import Photo from "../../components/photo";
 
 const BlogPage = ({ data }) => {
   return (
     <Layout>
+      <Photo
+        source={"../../images/work.jpg"}
+        alternative={"ajdjhsdkfh"}
+      ></Photo>
       <h2>I write along as I learn. Also some translations and essays.</h2>
       {data.allMdx.nodes.map((node) => (
         <article key={node.id}>

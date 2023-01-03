@@ -8,7 +8,7 @@ import Work from "../images/work.jpg";
 const HomePage = ({ data }) => {
   return (
     <Layout>
-      <h2>Hi there 👋, my name is Trang</h2>
+      <h2>Hi there 👋 my name is Trang</h2>
       <ul>
         <li>
           I'm a product manager{" "}
@@ -20,17 +20,20 @@ const HomePage = ({ data }) => {
           (<Link to="/blog/resume">resume</Link>).
         </li>
         <li>I love humor,</li>
-        <li>and photography.</li>
+        <li>
+          and <Link to="">photography</Link>.
+        </li>
       </ul>
       <p>
-        Contact: <a href="mailto: n-trang@outlook.com">n-trang@outlook.com</a>,{" "}
+        Contact: <a href="mailto: n-trang@outlook.com">n-trang@outlook.com</a>
+        {/* ,{" "}
         <a href="http://github.com/n-trang" target="_blank">
           github
         </a>
         ,{" "}
         <a href="https://vsco.co/trangtn0" target="_blank">
           VSCO
-        </a>
+        </a> */}
         .
       </p>
       <h2>Cover letter</h2>
