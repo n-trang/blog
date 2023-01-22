@@ -11,13 +11,14 @@ const HomePage = ({ data }) => {
       <h2>Hi there 👋 my name is Trang</h2>
       <ul>
         <li>
-          I'm a product manager{" "}
-          <i>
-            <a href="https://youtu.be/gJLIiF15wjQ?t=48" target="_blank">
-              wannabe
-            </a>
-          </i>{" "}
-          (<Link to="/blog/resume">resume</Link>).
+          I'm a software engineer{" "}
+          <a href="https://youtu.be/gJLIiF15wjQ?t=48" target="_blank">
+            wannabe
+          </a>{" "}
+          <b>
+            (<Link to="/blog/resume">resume✒️</Link>)
+          </b>
+          .
         </li>
         <li>I love humor,</li>
         <li>
@@ -25,15 +26,21 @@ const HomePage = ({ data }) => {
         </li>
       </ul>
       <p>
-        Contact: <a href="mailto: n-trang@outlook.com">n-trang@outlook.com</a>
-        {/* ,{" "}
-        <a href="http://github.com/n-trang" target="_blank">
-          github
+        Contact: <a href="mailto: n-trang@outlook.com">n-trang@outlook.com</a>.
+      </p>
+      <p>
+        Other places:{" "}
+        <a href="https://github.com/n-trang" target="_blank">
+          Github
         </a>
         ,{" "}
-        <a href="https://vsco.co/trangtn0" target="_blank">
-          VSCO
-        </a> */}
+        <a href="" target="_blank">
+          LinkedIn
+        </a>
+        ,{" "}
+        <a href="https://dev.to/ntrang" target="_blank">
+          DEV.to
+        </a>
         .
       </p>
       <h2>Cover letter</h2>
@@ -91,6 +98,6 @@ export const query = graphql`
   }
 `;
 
-export const Head = () => <Seo title="hello world 👋 | nguyen trang" />;
+export const Head = () => <Seo title="hello world 👋" />;
 
 export default HomePage;

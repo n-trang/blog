@@ -15,6 +15,12 @@ const Project = ({ data, children }) => {
         <code>Tools & technologies: {data.mdx.frontmatter.techstack}</code>
       </center>
       <hr></hr>
+      {/* <h2>Try it out</h2>
+      <button>tpwk</button>, see the{" "}
+      <code>
+        <a href="">raw code</a>
+      </code>
+      , or install via npm <code>npm install tpwk</code>. */}
       <h2>What</h2>
       <p>{data.mdx.frontmatter.tldr}</p>
       {children}
