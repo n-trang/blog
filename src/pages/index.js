@@ -16,7 +16,7 @@ const HomePage = ({ data }) => {
             wannabe
           </a>{" "}
           <b>
-            (<Link to="/blog/resume">cv-swe-trang.pdf</Link>)
+            (<Link to="/blog/resume">cv-swe-trang.pdf ↗</Link>)
           </b>
           .
         </li>
