@@ -14,7 +14,8 @@ const HomePage = ({ data }) => {
           I'm a software engineer{" "}
           <a href="https://youtu.be/gJLIiF15wjQ?t=48" target="_blank">
             wannabe
-          </a>{" "}(<Link to="/blog/resume">cv-swe-trang.pdf ↗</Link>)
+          </a>{" "}
+    -{" "}<code><Link to="/blog/resume">cv-swe-trang.pdf ↗</Link></code
           .
         </li>
         <li>I love humor,</li>
